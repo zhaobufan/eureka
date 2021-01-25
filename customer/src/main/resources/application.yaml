@@ -1,0 +1,8 @@
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1.com:8671/eureka
+  instance:
+    appname: customer-8081

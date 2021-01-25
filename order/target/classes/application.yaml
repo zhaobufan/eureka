@@ -1,0 +1,16 @@
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1.com:8671/eureka/
+    #��ʾeureka client������ȥ��ȡ����ע����Ϣ��Ĭ��Ϊ30�룬
+    #����api-gateway�����ҪѸ�ٻ�ȡ����ע��״̬��������С��ֵ������5��
+    registry-fetch-interval-seconds: 5
+  instance:
+    appname: order-8082
+    #��Լ���ͼ��Ĭ��30�룬�������
+    lease-renewal-interval-in-seconds: 5
+    # ��Լ����ʱ�䣨Ĭ��90�룩
+    lease-expiration-duration-in-seconds: 60
+

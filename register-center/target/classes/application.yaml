@@ -1,0 +1,25 @@
+server:
+  #
+  port: 8671
+eureka:
+  instance:
+    #������
+    hostname: eureka1.com
+  client:
+    service-url:
+      #
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+    #�Ƿ��Լ�ע�ᵽEureka Server,Ĭ��Ϊtrue�����ڵ�ǰ����server���ʶ����ó�false�������÷��񲻻���eurekaע���Լ�����Ϣ
+    fetch-registry: false
+    #�Ƿ��eureka server��ȡע����Ϣ�����ڵ��ڵ㣬����Ҫͬ�������ڵ����ݣ���false
+    register-with-eureka: false
+
+  server:
+    #�ر����ұ���ģʽ
+    enable-self-preservation: false
+    #ʧЧ������
+    eviction-interval-timer-in-ms: 3000
+management:
+  endpoint:
+    shutdown:
+      enabled: true
